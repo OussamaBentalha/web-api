@@ -1,6 +1,14 @@
 module.exports = function(app){
     var UserSchema = app.mongoose.Schema({
-        username: {
+        name: {
+            type: String,
+            required: true
+        },
+        firstname: {
+            type: String,
+            required: true
+        },
+        mail: {
             type: String,
             required: true
         },
