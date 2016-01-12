@@ -14,22 +14,22 @@ module.exports = function(app){
         eventDate: {
             type: Date,
             required: true
-        }
+        },
         //TODO Image
-        /*categoryId: {
+        categoryId: {
             type: app.mongoose.Schema.ObjectId,
             ref: 'Category',
             required: true
         },
-        userId: {
+        organizerID: {
             type: app.mongoose.Schema.ObjectId,
             ref: 'User',
             required: true
         },
-        usersId: [{
+        participantsId: [{
             type: app.mongoose.Schema.Types.ObjectId,
             ref: 'User'
-        }]*/
+        }]
 
     });
 
