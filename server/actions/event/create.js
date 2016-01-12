@@ -6,8 +6,10 @@ module.exports = function(app){
         var event = new app.models.Category({
             name: req.body.name,
             description: req.body.description,
-            eventDate: req.body.eventDate
+            eventDate: req.body.eventDate,
             //TODO Image
+            category: req.body.category,
+            userId: req.session.userId
         });
 
         event.save(function(err, instance){

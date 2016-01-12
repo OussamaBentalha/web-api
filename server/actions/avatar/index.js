@@ -1,3 +1,6 @@
-/**
- * Created by Sam on 12/01/2016.
- */
+module.exports = function(app){
+    return {
+        upload: require('./upload')(app),
+        show: require('./show')(app)
+    };
+};

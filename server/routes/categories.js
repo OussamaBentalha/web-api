@@ -15,6 +15,10 @@ module.exports = function(app){
         app.actions.categories.list
     );
 
+    router.get('/:id',
+        app.actions.categories.show
+    );
+
     //TODO Tests
     router.delete('/:name',
         app.actions.categories.remove

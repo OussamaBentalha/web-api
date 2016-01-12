@@ -16,6 +16,21 @@ module.exports = function(app){
             required: true
         }
         //TODO Image
+        /*categoryId: {
+            type: app.mongoose.Schema.ObjectId,
+            ref: 'Category',
+            required: true
+        },
+        userId: {
+            type: app.mongoose.Schema.ObjectId,
+            ref: 'User',
+            required: true
+        },
+        usersId: [{
+            type: app.mongoose.Schema.Types.ObjectId,
+            ref: 'User'
+        }]*/
+
     });
 
     EventSchema.plugin(require('mongoose-timestamp'));
