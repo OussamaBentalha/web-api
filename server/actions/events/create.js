@@ -8,8 +8,9 @@ module.exports = function(app){
             description: req.body.description,
             eventDate: req.body.eventDate,
             //TODO Image
-            category: req.body.category,
-            userId: req.session.userId
+            categoryId: req.body.categoryId,
+            organizerId: req.session.userId,
+            participantsId: req.body.participantsId
         });
 
         event.save(function(err, instance){

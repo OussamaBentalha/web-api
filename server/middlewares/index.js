@@ -4,6 +4,8 @@ module.exports = function(app) {
     app.use(cookieParser());
 
     app.middlewares = {
-        authenticated: require('./authenticated')(app)
+        authenticated: require('./authenticated')(app),
+        //TODO Test
+        owner: require('./owner')(app)
     };
 };

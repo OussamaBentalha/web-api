@@ -21,7 +21,7 @@ module.exports = function(app){
             ref: 'Category',
             required: true
         },
-        organizerID: {
+        organizerId: {
             type: app.mongoose.Schema.ObjectId,
             ref: 'User',
             required: true
