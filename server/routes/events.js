@@ -20,10 +20,24 @@ module.exports = function(app){
         app.actions.events.show
     );
 
-    //TODO Tests
+    //TODO Tests + Middlewares
+
+    router.put('/:id',
+        app.actions.events.update
+    );
+
     router.delete('/:name',
         app.middlewares.owner,
         app.actions.events.remove
+    );
+
+    //TODO Participants
+    router.post('/suscribe/:id',
+        app.actions.events.participants.suscribe
+    );
+
+    router.delete('/unsuscribe/:id',
+        app.actions.events.participants.unsuscribe
     );
 
     return router;

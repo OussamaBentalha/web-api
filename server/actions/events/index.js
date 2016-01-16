@@ -6,12 +6,8 @@ module.exports = function(app){
         create: require('./create')(app),
         list: require('./list')(app),
         show: require('./show')(app),
-        remove: require('./remove')(app)
-        //TODO
-        /*
+        remove: require('./remove')(app),
         update: require('./update')(app),
-        suscribe: require('./suscribe')(app),
-        unsubscribe: require('./unsubscribe')(app)
-         */
+        participants: require('./participants')(app)
     };
 };

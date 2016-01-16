@@ -19,7 +19,11 @@ module.exports = function(app){
         app.actions.categories.show
     );
 
-    //TODO Tests
+    //TODO Tests + Middlewares
+    router.put('/:id',
+        app.actions.categories.update
+    );
+
     router.delete('/:name',
         app.actions.categories.remove
     );

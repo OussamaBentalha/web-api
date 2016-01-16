@@ -6,6 +6,6 @@ module.exports = function(app) {
     app.middlewares = {
         authenticated: require('./authenticated')(app),
         //TODO Test
-        owner: require('./owner')(app)
+        eventCreator: require('./eventCreator')(app)
     };
 };
