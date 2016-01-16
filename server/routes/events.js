@@ -27,7 +27,6 @@ module.exports = function(app){
     );
 
     router.delete('/:name',
-        app.middlewares.owner,
         app.actions.events.remove
     );
 

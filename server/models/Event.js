@@ -35,6 +35,6 @@ module.exports = function(app){
 
     EventSchema.plugin(require('mongoose-timestamp'));
 
-    var Event = app.mongoose.model('Category', EventSchema);
+    var Event = app.mongoose.model('Event', EventSchema);
     return Event;
 };
