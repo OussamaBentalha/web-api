@@ -3,7 +3,8 @@
  */
 module.exports = function(app){
     return {
-        suscribe: require('./suscribe')(app),
-        unsuscribe: require('./unsuscribe')(app)
+        subscribe: require('./subscribe')(app),
+        unsubscribe: require('./unsubscribe')(app),
+        list: require('./list')(app)
     };
 };

@@ -9,7 +9,7 @@ module.exports = function(app){
     router.post('/',
         bodyparser,
         app.middlewares.authenticated,
-        app.actions.events.create
+        app.actions.events.create,
     );
 
     router.get('/',
