@@ -9,7 +9,7 @@ module.exports = function(app){
     router.post('/',
         bodyparser,
         app.middlewares.authenticated,
-        app.actions.events.create,
+        app.actions.events.create
     );
 
     router.get('/',
@@ -32,11 +32,11 @@ module.exports = function(app){
 
     //TODO Participants
     router.post('/suscribe/:id',
-        app.actions.events.participants.suscribe
+        app.actions.events.participants.subscribe
     );
 
     router.delete('/unsuscribe/:id',
-        app.actions.events.participants.unsuscribe
+        app.actions.events.participants.unsubscribe
     );
 
     return router;
