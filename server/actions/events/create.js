@@ -3,13 +3,13 @@
  */
 module.exports = function(app){
     return function(req, res, next){
-        var event = new app.models.Category({
-            name: req.body.name,
+        var event = new app.models.Event({
+            title: req.body.title,
             description: req.body.description,
             eventDate: req.body.eventDate,
             categoryId: req.body.categoryId,
             organizerId: req.session.userId,
-            participantsId: req.body.participantsId
+            participantsId: req.session.userId
         });
 
         event.save(function(err, instance){

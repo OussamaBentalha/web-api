@@ -9,13 +9,12 @@ module.exports = function(app){
         },
         description: {
             type: String,
-            required: true
+            required: false
         },
         eventDate: {
             type: Date,
             required: true
         },
-        //TODO Image
         categoryId: {
             type: app.mongoose.Schema.ObjectId,
             ref: 'Category',
@@ -30,6 +29,7 @@ module.exports = function(app){
             type: app.mongoose.Schema.Types.ObjectId,
             ref: 'User'
         }]
+        //TODO Image
 
     });
 

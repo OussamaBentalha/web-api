@@ -21,6 +21,7 @@ module.exports = function(app){
 
     //TODO Tests + Middlewares
     router.put('/:id',
+        bodyparser,
         app.actions.categories.update
     );
 
