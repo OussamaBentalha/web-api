@@ -7,6 +7,7 @@ module.exports = function (app) {
             name: req.body.name
         });
 
+        category.eventCount = 0;
         category.save(function (err, instance) {
             if(err)
                 return res.status(500).send(err);

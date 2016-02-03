@@ -6,6 +6,9 @@ module.exports = function(app){
         name: {
             type: String,
             required: true
+        },
+        eventCount: {
+            type: Number
         }
     });
 

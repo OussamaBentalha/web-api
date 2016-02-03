@@ -7,7 +7,6 @@ module.exports = function(app){
             name: req.body.name,
             description: req.body.description,
             eventDate: req.body.eventDate,
-            //TODO Image
             categoryId: req.body.categoryId,
             organizerId: req.session.userId,
             participantsId: req.body.participantsId
