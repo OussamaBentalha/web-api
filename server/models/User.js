@@ -15,6 +15,10 @@ module.exports = function(app){
         password: {
             type: String,
             required: true
+        },
+        avatarUrl: {
+            type: String,
+            default: '/default_avatar.png'
         }
     });
 

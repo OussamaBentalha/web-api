@@ -1,7 +1,5 @@
 module.exports = function(app){
     return function(req, res, next){
-        console.log("mail" + req.body.mail);
-        console.log("password" + req.body.password);
 
         app.models.User.findOne({ mail: req.body.mail }, function(err, user) {
             if (err) throw err;

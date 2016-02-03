@@ -1,11 +1,10 @@
 var cookieParser = require('cookie-parser');
+
 module.exports = function(app) {
-    require('./session')(app);
     app.use(cookieParser());
 
-    app.middlewares = {
-        authenticated: require('./authenticated')(app),
-        //TODO Test
-        eventCreator: require('./eventCreator')(app)
-    };
+    require('./session')(app);
+    require('./authenticated')(app);
+    require('./upload')(app);
+    require('./eventCreator')(app);
 };
