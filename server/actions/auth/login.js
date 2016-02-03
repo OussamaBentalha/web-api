@@ -1,17 +1,27 @@
 module.exports = function(app){
     return function(req, res, next){
-        app.models.User.findOne({
-            username: req.body.username,
-            password: req.body.password
-        }, function(err, instance){
-            if(err)
-                return res.status(500).send(err);
+        console.log("mail" + req.body.mail);
+        console.log("password" + req.body.password);
 
-            if(!instance)
+        app.models.User.findOne({ mail: req.body.mail }, function(err, user) {
+            if (err) throw err;
+
+            if(user) { // User trouvé
+                user.comparePassword(req.body.password, function(err, isMatch) {
+                    if (err) throw err;
+                    if(isMatch) {
+                        req.session.userId = user.id;
+                        res.send(user);
+                    } else {
+                        // Mauvais password
+                        return res.status(404).send('password incorrect');
+                    }
+                });
+            } else { // User inexistant
                 return res.status(404).send('account not found.');
+            }
 
-            req.session.userId = instance.id;
-            res.send(instance);
-        })
+
+        });
     };
 };
