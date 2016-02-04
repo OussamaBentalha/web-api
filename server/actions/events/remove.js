@@ -4,11 +4,11 @@
 module.exports = function(app) {
     return function(req, res, next){
         app.models.Event.findOneAndRemove({
-            name: req.params.name
+            _id: req.params.id
         }, function(err, result){
             if(err)
                 return res.status(500).send(err);
-
+            
             res.send(result);
         });
     }

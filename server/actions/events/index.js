@@ -8,6 +8,7 @@ module.exports = function(app){
         show: require('./show')(app),
         remove: require('./remove')(app),
         update: require('./update')(app),
+        find: require('./find')(app),
         participants: require('./participants')(app)
     };
 };

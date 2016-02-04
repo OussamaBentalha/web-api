@@ -4,7 +4,6 @@
 module.exports = function(app){
     return {
         subscribe: require('./subscribe')(app),
-        unsubscribe: require('./unsubscribe')(app),
-        list: require('./list')(app)
+        unsubscribe: require('./unsubscribe')(app)
     };
 };

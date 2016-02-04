@@ -16,26 +16,34 @@ module.exports = function(app){
         app.actions.events.list
     );
 
+    //Recherche par id
     router.get('/:id',
         app.actions.events.show
     );
 
-    //TODO Tests + Middlewares
+    //Recherche par query
+    router.post('/find/',
+        bodyparser,
+        app.actions.events.find
+    );
 
     router.put('/:id',
+        bodyparser,
         app.actions.events.update
     );
 
-    router.delete('/:name',
+    router.delete('/:id',
         app.actions.events.remove
     );
 
     //TODO Participants
-    router.post('/suscribe/:id',
+    router.put('/subscribe/:id',
+        bodyparser,
         app.actions.events.participants.subscribe
     );
 
-    router.delete('/unsuscribe/:id',
+    router.put('/unsubscribe/:id',
+        bodyparser,
         app.actions.events.participants.unsubscribe
     );
 
