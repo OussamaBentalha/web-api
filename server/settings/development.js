@@ -1,8 +1,8 @@
 module.exports = {
     port: 8080,
     //LOCALHOST
-    db: 'mongodb://localhost:27017/todo-list-api',
-    sessionDb: 'mongodb://localhost:27017/todo-list-session-db',
+    db: 'mongodb://admin:admin@ds059185.mongolab.com:59185/heroku_0bcx23jj',
+    sessionDb: 'mongodb://admin:admin@ds055895.mongolab.com:55895/heroku_z34shwgt',
 
     //db: 'mongodb://inovea_eventdb',
     //sessionDb:'mongodb://inovea:inovea4iam@ds055485.mongolab.com:55485/inovea_eventdb',
