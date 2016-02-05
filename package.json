@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "bcrypt": "^0.8.5",
     "bluebird": "^2.10.2",
     "body-parser": "^1.13.3",
     "connect-mongo": "^0.8.2",
@@ -13,8 +14,8 @@
     "lodash": "^3.10.1",
     "mongoose": "^4.2.8",
     "mongoose-timestamp": "^0.4.0",
-    "serve-favicon": "~2.3.0",
     "multer": "^1.1.0",
+    "serve-favicon": "~2.3.0",
     "yargs": "^3.30.0"
   }
 }
