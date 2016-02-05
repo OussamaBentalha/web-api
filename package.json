@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node index.js" //Command line to start server (Heroku)
+    "start": "node index.js"
   },
   "dependencies": {
     "bcrypt": "^0.8.5",
