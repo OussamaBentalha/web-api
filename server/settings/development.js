@@ -1,5 +1,5 @@
 module.exports = {
-    port: 8080,
+    port: process.env.PORT || 8080,
     //LOCALHOST
     db: 'mongodb://heroku_0bcx23jj:9m6811rb7vodv4pkrrapuo7aab@ds059185.mongolab.com:59185/heroku_0bcx23jj',
     sessionDb: 'mongodb://admin:admin@ds055895.mongolab.com:55895/heroku_z34shwgt',
