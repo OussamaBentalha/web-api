@@ -1,7 +1,9 @@
 module.exports = function(app){
     return function(req, res, next){
         var user = new app.models.User({
-            username: req.body.username,
+            name: req.body.name,
+            firstname: req.body.firstname,
+            mail: req.body.mail,
             password: req.body.password
         });
 

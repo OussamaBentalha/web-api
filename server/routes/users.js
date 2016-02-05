@@ -11,5 +11,11 @@ module.exports = function(app){
         app.actions.users.list
     );
 
+    router.post('/avatar',
+        app.middlewares.authenticated,
+        app.middlewares.upload.single('avatar'),
+        app.actions.users.uploadAvatar
+    );
+
     return router;
 };
