@@ -36,7 +36,7 @@ module.exports = function(app){
         app.actions.events.remove
     );
 
-    //TODO participants
+    //TODO Participants
     router.put('/subscribe/:id',
         bodyparser,
         app.actions.events.participants.subscribe

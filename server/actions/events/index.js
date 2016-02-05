@@ -9,6 +9,6 @@ module.exports = function(app){
         remove: require('./remove')(app),
         update: require('./update')(app),
         find: require('./find')(app),
-        participants: require('./participants')(app)
+        participants: require('./Participants')(app)
     };
 };
