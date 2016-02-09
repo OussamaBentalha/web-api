@@ -20,7 +20,12 @@ module.exports = function(app){
     router.get('/:id',
         app.actions.events.show
     );
-    
+
+    //Recherche par UserID (Organizer or Participant)
+    router.get('/user/:id',
+        app.actions.events.getByUser
+    );
+
     //Recherche par Organisateur
     router.get('/organizer/:id',
         app.actions.events.getByOrganizer

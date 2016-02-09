@@ -10,6 +10,7 @@ module.exports = function(app){
         update: require('./update')(app),
         find: require('./find')(app),
         participants: require('./Participants')(app),
+        getByUser: require('./getByUser')(app),
         getByOrganizer: require('./getByOrganizer')(app),
         getByParticipant: require('./getByParticipant')(app)
     };
