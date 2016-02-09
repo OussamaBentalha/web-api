@@ -20,6 +20,16 @@ module.exports = function(app){
     router.get('/:id',
         app.actions.events.show
     );
+    
+    //Recherche par Organisateur
+    router.get('/organizer/:id',
+        app.actions.events.getByOrganizer
+    );
+    
+    //Recherche par Participant
+    router.get('/participant/:id',
+        app.actions.events.getByParticipant
+    );
 
     //Recherche par query
     router.post('/find/',
