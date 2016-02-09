@@ -7,4 +7,5 @@ module.exports = function(app) {
     require('./authenticated')(app);
     require('./upload')(app);
     require('./eventCreator')(app);
+    require('./userExist')(app);
 };
