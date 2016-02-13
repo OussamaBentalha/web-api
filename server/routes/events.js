@@ -5,7 +5,7 @@ var router = require('express').Router();
 var bodyparser = require('body-parser').json();
 
 module.exports = function(app){
-    //TODO Test
+
     router.post('/',
         bodyparser,
         app.middlewares.authenticated,
@@ -59,6 +59,12 @@ module.exports = function(app){
     router.put('/unsubscribe/:id',
         bodyparser,
         app.actions.events.participants.unsubscribe
+    );
+
+    router.post('/picture/:id',
+        //app.middlewares.authenticated,
+        app.middlewares.uploadPicture.single('picture'),
+        app.actions.events.uploadPicture
     );
 
     return router;

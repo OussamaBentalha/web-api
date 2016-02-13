@@ -17,5 +17,5 @@ var storage = multer.diskStorage({
 
 module.exports = function(app){
     app.middlewares = app.middlewares || {};
-    app.middlewares.upload = multer({ storage: storage });
+    app.middlewares.uploadAvatar = multer({ storage: storage });
 };
