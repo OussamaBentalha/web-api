@@ -28,8 +28,11 @@ module.exports = function(app){
         participantsId: [{
             type: app.mongoose.Schema.Types.ObjectId,
             ref: 'User'
+        }],
+        picturesUrl: [{
+            type: String,
+            default: '/default_avatar.png'
         }]
-        //TODO Image
 
     });
 

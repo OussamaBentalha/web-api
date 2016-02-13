@@ -32,5 +32,15 @@ module.exports = function(app){
         app.actions.users.uploadAvatar
     );
 
+    router.put('/friends-add/:id',
+        bodyparser,
+        app.actions.users.friends.add
+    );
+
+    router.put('/friends-remove/:id',
+        bodyparser,
+        app.actions.users.friends.remove
+    );
+
     return router;
 };
