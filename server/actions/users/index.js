@@ -5,6 +5,7 @@ module.exports = function(app){
         show: require('./show')(app),
         update: require('./update')(app),
         remove: require('./remove')(app),
-        uploadAvatar: require('./uploadAvatar')(app)
+        uploadAvatar: require('./uploadAvatar')(app),
+        friends: require('./friends')(app)
     };
 };
