@@ -31,7 +31,7 @@ module.exports = function(app){
         }],
         picturesUrl: [{
             type: String,
-            default: '/default_avatar.png'
+            default: '/default_picture.png'
         }]
 
     });

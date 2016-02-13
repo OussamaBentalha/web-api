@@ -14,5 +14,6 @@ module.exports = function(app){
         getByOrganizer: require('./getByOrganizer')(app),
         getByParticipant: require('./getByParticipant')(app),
         uploadPicture: require('./uploadPicture')(app),
+        deletePicture: require('./deletePicture')(app)
     };
 };
