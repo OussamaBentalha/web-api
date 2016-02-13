@@ -67,5 +67,12 @@ module.exports = function(app){
         app.actions.events.uploadPicture
     );
 
+    router.post('/picture/',
+        bodyparser,
+        app.actions.events.deletePicture
+        //app.middlewares.authenticated,
+        //app.middlewares.uploadPicture.single('picture'),
+    );
+
     return router;
 };
