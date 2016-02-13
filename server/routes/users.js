@@ -28,7 +28,7 @@ module.exports = function(app){
 
     router.post('/avatar',
         app.middlewares.authenticated,
-        app.middlewares.upload.single('avatar'),
+        app.middlewares.uploadAvatar.single('avatar'),
         app.actions.users.uploadAvatar
     );
 

@@ -5,7 +5,8 @@ module.exports = function(app) {
 
     require('./session')(app);
     require('./authenticated')(app);
-    require('./upload')(app);
+    require('./uploadAvatar')(app);
+    require('./uploadPicture')(app);
     require('./eventCreator')(app);
     require('./userExist')(app);
 };
