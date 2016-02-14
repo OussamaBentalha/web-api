@@ -21,7 +21,7 @@ module.exports = function(app){
             default: '/default_avatar.png'
         },
         friendsId: [{
-            type: app.mongoose.Schema.ObjectId,
+            type: app.mongoose.Schema.Types.ObjectId,
             ref: 'User'
         }]
     });
