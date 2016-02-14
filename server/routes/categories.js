@@ -19,7 +19,6 @@ module.exports = function(app){
         app.actions.categories.show
     );
 
-    //TODO Tests + Middlewares
     router.put('/:id',
         bodyparser,
         app.actions.categories.update
