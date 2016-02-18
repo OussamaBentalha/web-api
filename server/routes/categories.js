@@ -21,10 +21,12 @@ module.exports = function(app){
 
     router.put('/:id',
         bodyparser,
+        app.middlewares.isFreeCategory,
         app.actions.categories.update
     );
 
-    router.delete('/:name',
+    router.delete('/:id',
+        app.middlewares.isFreeCategory,
         app.actions.categories.remove
     );
 

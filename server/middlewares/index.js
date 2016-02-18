@@ -7,6 +7,8 @@ module.exports = function(app) {
     require('./authenticated')(app);
     require('./uploadAvatar')(app);
     require('./uploadPicture')(app);
-    require('./eventCreator')(app);
+    require('./isEventCreator')(app);
     require('./userExist')(app);
+    require('./isFreeCategory')(app);
+    require('./creatorCantUnsubscribe')(app);
 };
