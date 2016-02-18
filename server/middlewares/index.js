@@ -5,7 +5,10 @@ module.exports = function(app) {
 
     require('./session')(app);
     require('./authenticated')(app);
-    require('./upload')(app);
-    require('./eventCreator')(app);
+    require('./uploadAvatar')(app);
+    require('./uploadPicture')(app);
+    require('./isEventCreator')(app);
     require('./userExist')(app);
+    require('./isFreeCategory')(app);
+    require('./creatorCantUnsubscribe')(app);
 };

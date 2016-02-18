@@ -5,13 +5,33 @@ var router = require('express').Router();
 var bodyparser = require('body-parser').json();
 
 module.exports = function(app){
-    //TODO Test
+
     router.post('/',
         bodyparser,
         app.middlewares.authenticated,
         app.actions.events.create
     );
 
+    router.put('/:id',
+        bodyparser,
+        app.middlewares.isEventCreator,
+        app.actions.events.update
+    );
+
+    router.delete('/:id',
+        app.middlewares.isEventCreator,
+        app.actions.events.remove
+    );
+
+
+
+
+
+    /*
+     *
+     * FONCTIONS DE RECHERCHE
+     *
+     */
     router.get('/',
         app.actions.events.list
     );
@@ -42,16 +62,18 @@ module.exports = function(app){
         app.actions.events.find
     );
 
-    router.put('/:id',
-        bodyparser,
-        app.actions.events.update
-    );
 
-    router.delete('/:id',
-        app.actions.events.remove
-    );
 
-    //TODO Participants
+
+
+
+
+
+    /*
+     *
+     * PARTICIPANTS
+     *
+     */
     router.put('/subscribe/:id',
         bodyparser,
         app.actions.events.participants.subscribe
@@ -59,7 +81,31 @@ module.exports = function(app){
 
     router.put('/unsubscribe/:id',
         bodyparser,
+        app.middlewares.creatorCantUnsubscribe,
         app.actions.events.participants.unsubscribe
+    );
+
+
+
+
+
+
+    /*
+     *
+     * PICTURES
+     *
+     */
+    router.post('/picture/:id',
+        //app.middlewares.authenticated,
+        app.middlewares.uploadPicture.single('picture'),
+        app.actions.events.uploadPicture
+    );
+
+    router.post('/picture/',
+        bodyparser,
+        app.actions.events.deletePicture
+        //app.middlewares.authenticated,
+        //app.middlewares.uploadPicture.single('picture'),
     );
 
     return router;

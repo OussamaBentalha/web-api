@@ -28,8 +28,18 @@ module.exports = function(app){
 
     router.post('/avatar',
         app.middlewares.authenticated,
-        app.middlewares.upload.single('avatar'),
+        app.middlewares.uploadAvatar.single('avatar'),
         app.actions.users.uploadAvatar
+    );
+
+    router.put('/friends-add/:id',
+        bodyparser,
+        app.actions.users.friends.add
+    );
+
+    router.put('/friends-remove/:id',
+        bodyparser,
+        app.actions.users.friends.remove
     );
 
     return router;

@@ -19,7 +19,11 @@ module.exports = function(app){
         avatarUrl: {
             type: String,
             default: '/default_avatar.png'
-        }
+        },
+        friendsId: [{
+            type: app.mongoose.Schema.Types.ObjectId,
+            ref: 'User'
+        }]
     });
 
     UserSchema.pre('save', function(next) {
