@@ -4,6 +4,7 @@
 module.exports = function(app){
     return {
         add: require('./add')(app),
-        remove: require('./remove')(app)
+        remove: require('./remove')(app),
+        get: require('./get')(app)
     };
 };

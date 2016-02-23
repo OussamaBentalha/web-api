@@ -26,12 +26,26 @@ module.exports = function(app){
         app.actions.users.remove
     );
 
+
+    /*
+     *
+     * AVATAR
+     *
+     */
     router.post('/avatar',
         app.middlewares.authenticated,
         app.middlewares.uploadAvatar.single('avatar'),
         app.actions.users.uploadAvatar
     );
 
+
+
+
+    /*
+     *
+     * FRIENDS
+     *
+     */
     router.put('/friends-add/:id',
         bodyparser,
         app.actions.users.friends.add
@@ -41,6 +55,11 @@ module.exports = function(app){
         bodyparser,
         app.actions.users.friends.remove
     );
+
+    router.get('/friends/:id',
+        app.actions.users.friends.get
+    );
+
 
     return router;
 };
